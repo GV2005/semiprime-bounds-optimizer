@@ -31,7 +31,7 @@ class SemiprimeBoundsOptimizer:
         # 1. Check for small prime branch inclusion using N-only modular checks
         # This determines the branch path without requiring full factorization
         p_factor: Optional[int] = None
-        for p in:
+        for p in [3, 5, 7, 11, 13]:
             if N % p == 0:
                 p_factor = p
                 break
